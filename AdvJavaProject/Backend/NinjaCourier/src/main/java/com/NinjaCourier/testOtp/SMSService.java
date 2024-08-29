@@ -19,12 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 public class SMSService {
 	
 	
-	String x= your_Sid
 	
-	String y= your token
-	
-	
-	String z= your number
 	
 	private final Logger log = LoggerFactory.getLogger(getClass());
 	
