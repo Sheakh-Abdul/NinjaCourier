@@ -19,12 +19,12 @@ import lombok.extern.slf4j.Slf4j;
 public class SMSService {
 	
 	
-	String ACCOUNT_SID = your_Sid
+	String x= your_Sid
 	
-	String AUTH_TOKEN = your token
+	String y= your token
 	
 	
-	String OUTGOING_SMS_NUMBER = your number
+	String z= your number
 	
 	private final Logger log = LoggerFactory.getLogger(getClass());
 	
@@ -32,7 +32,7 @@ public class SMSService {
 	
 	@PostConstruct
 	private void setup() {
-		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+		Twilio.init( x, y);
 	}
 	
 	
@@ -40,7 +40,7 @@ public class SMSService {
         try {
             Message message = Message.creator(
                     new PhoneNumber(smsNumber),
-                    new PhoneNumber(OUTGOING_SMS_NUMBER),
+                    new PhoneNumber(z),
                     smsMessage).create();
             
             log.info("SMS sent with SID: {}", message.getSid());
